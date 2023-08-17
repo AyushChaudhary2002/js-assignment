@@ -32,6 +32,5 @@ class Book {
   }
 }
 
-
 const data = JSON.stringify(new Book().generateBookData());
 fs.writeFileSync('data.json', data);

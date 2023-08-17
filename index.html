@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,93 +8,50 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"/>
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
     <title>Book Catalog</title>
   </head>
 
   <body>
-    <div
-      id="div-search-price"
-      class="container"
-      style="margin-bottom: 20px; padding-top: 20px" >
-      <h3>Search Book By Id</h3>
-      <form action="#">
-        <input
-          type="text"
-          id="input-search-id"
-          class="form-control"
-          style="width: 25%; display: inline"/>
-        <button id="btn-search-id" class="btn" type="submit">
-          Search Product
-        </button>
-      </form>
-    </div>
+    <main>
+      <section class="container js-bookId">
+        <h3>Search Book By Id</h3>
+        <form action="#" class="js-form-bookId">
+          <input type="text" class="form-control js-input-bookId" />
+          <button class="btn js-btn-bookId" type="submit">
+            Search Product
+          </button>
+        </form>
+      </section>
 
-    <div
-      id="div-search-genre"
-      class="container"
-      style="margin-bottom: 20px; padding-top: 20px ">
-      <h3>Search Book By Genre</h3>
-      <form action="#">
-        <input
-          type="text"
-          id="input-search-genre"
-          class="form-control"
-          style="width: 25%; display: inline"/>
-        <button id="btn-search-genre" class="btn" type="submit">
-          Search Genre
-        </button>
-      </form>
-    </div>
+      <section class="container js-genre">
+        <h3>Search Book By Genre</h3>
+        <form action="#" class="js-form-genre">
+          <input type="text" class="form-control js-input-genre" />
+          <button class="btn js-btn-genre" type="submit">Search Genre</button>
+        </form>
+      </section>
 
-    <div
-      id="div-search-price"
-      class="container"
-      style="margin-bottom: 20px; padding-top: 20px" >
-      <h3>Search Book By Price</h3>
-      <form action="#">
-        <input
-          type="text"
-          id="input-search-price"
-          class="form-control"
-          style="width: 25%; display: inline"/>
-        <button id="btn-search-price" class="btn" type="submit">
-          Search Price
-        </button>
-      </form>
-    </div>
+      <section class="container js-price">
+        <h3>Search Book By Price</h3>
+        <form action="#" class="js-form-price">
+          <input type="text" class="form-control js-input-price" />
+          <button class="btn js-btn-price" type="submit">Search Price</button>
+        </form>
+      </section>
 
-    <div id="div-examined-book" class="container" style="margin-bottom: 20px">
-      <h3>Examined Book</h3>
-      <ul id="list-examined-book" class="list-group">
-        <li class="list-group-item">Book Id: <span></span></li>
-        <li class="list-group-item">Price: <span></span></li>
-        <li class="list-group-item">Genre: <span></span></li>
-      </ul>
-    </div>
-
-    <div class="container" style="margin-bottom: 20px">
-      <h3>List of Similar Books</h3>
-      <table id="table-similar-books" class="table">
-        <thead>
-          <th>BookId</th>
-          <th>Genre</th>
-          <th>Price</th>
-          <th>Examine</th>
-        </thead>
-      </table>
-    </div>
-
-    <div class="container" style="margin-bottom: 20px">
-      <h3>List of All Books</h3>
-      <table id="table-all-books" class="table">
-        <tr>
-          <th>BookId</th>
-          <th>Genre</th>
-          <th>Price</th>
-          <th>Examine</th>
-        </tr>
-      </table>
-    </div>
+      <section class="container all-books">
+        <h3>List of All Books</h3>
+        <table class="table js-all-books">
+          <thead>
+            <th>BookId</th>
+            <th>Genre</th>
+            <th>Price</th>
+          </thead>
+        </table>
+      </section>
+    </main>
+    <script src="script.js" type="module"></script>
   </body>
 </html>
