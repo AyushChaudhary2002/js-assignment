@@ -3,15 +3,14 @@ import BookCatlog from './bookCatlog.js';
 
 const bookCatlog = new BookCatlog();
 
-bookCatlog.dataPromise.then((response) => {
-  response.json().then((data) => {
-    data.sort((a, b) => a.price - b.price);
-    sessionStorage.setItem('bookData', JSON.stringify(data));
-    bookCatlog.renderBooks(null, null);
-  });
-}).catch((err) => {
-  console.log(err);
-});
+async function addBookDataToSession() {
+  const data = await bookCatlog.dataPromise;
+  const bookData = await data.json();
+  bookData.sort((a, b) => a.price - b.price);
+  sessionStorage.setItem('bookData', JSON.stringify(bookData));
+  bookCatlog.renderBooks(null, null);
+}
+addBookDataToSession();
 
 const searchById = document.querySelector('.js-form-bookId');
 searchById.addEventListener('submit', (e) => {
