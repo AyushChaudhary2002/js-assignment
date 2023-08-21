@@ -45,6 +45,7 @@ export default class BookCatlog {
   getInputData(selector) {
     const searchByInput = document.querySelector(selector);
     const searchByValue = searchByInput.value;
+    searchByInput.value = '';
     return searchByValue;
   }
 }
